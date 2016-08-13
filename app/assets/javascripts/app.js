@@ -1,6 +1,15 @@
-angular.module('projectDj', [])
-.controller('MainCtrl', [
-  '$scope',
-  function($scope) {
-    $scope.test = 'projectDJ!';
-  }]);
+angular.module('projectDj', ['ui.router', 'templates'])
+.config([
+'$stateProvider',
+'$urlRouterProvider',
+function($stateProvider, $urlRouterProvider) {
+
+  $stateProvider
+    .state('home', {
+      url: '/home',
+      templateUrl: 'home/_home.html',
+      controller: 'MainCtrl'
+    });
+
+  $urlRouterProvider.otherwise('home');
+}]);
