@@ -14,3 +14,19 @@
  *= require_tree .
  *= require_self
  */
+
+.page-header {
+  text-align: center;
+  background-color: red;
+  margin-top: inherit;
+}
+
+.page-header h1 {
+   font-size: 75px;
+   margin-top: 0;
+   margin-bottom: 0;
+}
+
+.row {
+   width: inherit;
+}
