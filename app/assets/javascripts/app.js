@@ -5,7 +5,7 @@ angular.module('projectDj', ['ui.router', 'templates', 'Devise'])
     .state('home', {
       url: '/home',
       templateUrl: 'home/_home.html',
-      controller: 'MainCtrl'
+      controller: 'HomeCtrl'
     })
 
     .state('login', {
@@ -29,5 +29,5 @@ angular.module('projectDj', ['ui.router', 'templates', 'Devise'])
       }]
     });
 
-  $urlRouterProvider.otherwise('home');
+    $urlRouterProvider.otherwise('home');
 }]);
