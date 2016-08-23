@@ -1,7 +1,14 @@
 angular.module('projectDj')
-  .controller('NavCtrl', ['$scope', 'Auth', function($scope, Auth){
+.controller('NavCtrl', ['$scope', 'Auth', 'locationService', function($scope, Auth, locationService){
       $scope.signedIn = Auth.isAuthenticated;
       $scope.logout = Auth.logout;
+
+      $scope.isHome = function() {
+        var currentPath = locationService.get;
+        if (currentPath == '/') {
+          return true;
+        };
+      };
 
       Auth.currentUser().then(function (user){
         $scope.user = user;

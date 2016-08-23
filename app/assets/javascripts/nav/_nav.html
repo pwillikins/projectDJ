@@ -1,9 +1,53 @@
-<div class="collapse navbar-collapse pull-right" ng-controller="NavCtrl">
-  <ul class="nav navbar-nav">
-    <li><a href="#/home">Home</a></li>
-    <li ng-hide="signedIn()"><a href="#/login">Log In</a></li>
-    <li ng-hide="signedIn()"><a href="#/register">Register</a></li>
-    <li ng-show="signedIn()"><a href="#/">{{ user.username }}</a></li>
-    <li ng-show="signedIn()"><a ng-click="logout()">Log Out</a></li>
-  </ul>
-</div>
+  <!-- <div class="collapse navbar-collapse pull-right" ng-controller="NavCtrl">
+    <ul class="nav navbar-nav">
+      <li><a href="#/home"><h1>home</h1></a></li>
+      <li ng-hide="signedIn()"><a href="#/login"><h1>login</h1></a></li>
+      <li ng-hide="signedIn()"><a href="#/register"><h1>register</h1></a></li>
+      <li ng-show="signedIn()"><a href="#/"><h1>{{ user.username }}</h1></a></li>
+      <li ng-show="signedIn()"><a ng-click="logout()"><h1>log out</h1></a></li>
+    </ul>
+  </div></div> -->
+
+
+<nav class="navbar navbar-dark" ng-controller="NavCtrl">
+
+    <!-- Collapse button-->
+    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseEx2">
+        <i class="fa fa-bars"></i>
+    </button>
+
+    <div class="container">
+
+        <!--Collapse content-->
+        <div class="collapse navbar-toggleable-xs" id="collapseEx2">
+            <!--Navbar Brand-->
+            <a class="navbar-brand" href="/">PROJECT DJ</a>
+            <!--Links-->
+            <ul class="nav navbar-nav">
+                <li ng-show="signedIn()" class="nav-item active">
+                    <a class="nav-link" href="#">MY GROUPS <span class="sr-only">(current)</span></a>
+                </li>
+                <li ng-show="signedIn()" class="nav-item">
+                    <a class="nav-link" href="#">{{ user.username }}</a>
+                </li>
+                <li ng-hide="signedIn() || isHome()" class="nav-item">
+                    <a class="nav-link" href="/login">LOGIN</a>
+                </li>
+                <li ng-hide="signedIn() || isHome()" class="nav-item">
+                    <a class="nav-link" href="/register">REGISTER</a>
+                </li>
+                <li ng-show="signedIn()" class="nav-item">
+                    <a class="nav-link" ng-click="logout()">LOGOUT</a>
+                </li>
+            </ul>
+            <!--Search form-->
+            <form ng-show="signedIn()" class="form-inline">
+                <input class="form-control" type="text" placeholder="Search">
+            </form>
+        </div>
+        <!--/.Collapse content-->
+
+    </div>
+
+</nav>
+<!--/.Navbar-->

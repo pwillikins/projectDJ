@@ -1,6 +1,5 @@
 angular.module('projectDj')
-.controller('HomeCtrl', [
-  '$scope',
-  function($scope) {
-    $scope.test = 'Project DJ';
-  }]);
+.controller('HomeCtrl', ['$scope', 'Auth', function($scope, Auth) {
+    $scope.test = 'PROJECT DJ';
+    $scope.auth = Auth.isAuthenticated;
+}]);

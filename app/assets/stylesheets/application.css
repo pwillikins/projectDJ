@@ -15,18 +15,68 @@
  *= require_self
  */
 
-.page-header {
-  text-align: center;
-  background-color: red;
-  margin-top: inherit;
-}
+ body {
+  background-color: currentColor;
+ }
 
-.page-header h1 {
-   font-size: 75px;
-   margin-top: 0;
-   margin-bottom: 0;
-}
+ h1 {
+   color: white;
+   font-family: 'jaapokki', sans-serif;
+   font-weight: 900;
+   letter-spacing: -4px;
+ }
 
-.row {
-   width: inherit;
-}
+ .home-table {
+   display: table;
+   width: 100px;
+   height: 100px;
+
+   position: absolute;
+   top:0;
+   bottom: 26%;
+   left: 0;
+   right: 62%;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: auto;
+   margin-bottom: auto;
+ }
+
+ .home-table button {
+   width: 250%;
+   height: 50%;
+   font-family: 'jaapokki', sans-serif;
+   font-weight: 900;
+   letter-spacing: -1px;
+   margin-bottom: 55px;
+   font-size: 45px;
+   background-color: mediumseagreen;
+   border-color: mediumseagreen;
+ }
+
+ .home-table a {
+   display: block;
+   color: white;
+   text-decoration: none;
+ }
+
+ .home-table button:hover {
+   background-color: transparent;
+   border-color: mediumseagreen;
+ }
+
+ .collapse h1 {
+   color: white;
+   font-family: 'jaapokki', sans-serif;
+   font-weight: 900;
+   letter-spacing: -2px;
+ }
+
+ .form {
+   display: table;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 25%
+   left 0;
+   right 0;
+ }
